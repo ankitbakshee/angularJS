@@ -1,0 +1,71 @@
+<div class="container-fluid">
+    
+    <div>
+        <button class="btn" ng-click="order='name'">Order by name</button>
+        <button class="btn" ng-click="order='-powerLevel'">Order by power level</button>
+        <!--pop up button start-->
+        <button class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-sm">Large modal</button>
+
+        <!--pop up button ends-->
+    </div>
+    <div class="input-group input-group-lg">
+    <input type="text" placeholder="Search Content" ng-model="content" class="form-control"/>
+    <div class="input-group-btn">
+<button type="submit" class="btn btn-primary"><i class="glyphicon glyphicon-search"></i></button>
+    </div>
+    </div>
+<div style="width:100%">
+<table class="table table-striped table-hover table-bordered" style="width:100%;">
+<thead><tr class="table-success col-md-8">
+    <th>Image</th>
+    <th scope="row">Name</th><th scope="row">Role in DBZ</th>
+    <th>Power Level</th><th>Highest Form</th><th>Aura</th><th>Edit</th></tr></thead>
+<tbody>
+    <tr class="col-md-8" ng-repeat="dbz in dbzCharacters | orderBy: order | filter:content">
+        <td><img ng-src="{{dbz.photo}}" style="width:50px;height:50px; border-radius: 50%" ng-show="dbz.photo" /></td>
+        <td>{{dbz.name}}</td>
+        <td>{{dbz.role}}</td>
+        <td>{{dbz.powerLevel}}</td>
+        <td>{{dbz.highestLevel}}</td>
+        <td style="background: {{dbz.color}}"><span style="font-weight: bold;color:white">{{dbz.color}}</span></td>
+    <td><button class="btn btn-danger" ng-click="removeCharacter(dbz)">Remove</button></td>
+    </tr>
+</tbody>
+
+</table>
+</div>
+
+
+<!--********************pop up tags start***********-->
+<div class="modal fade bd-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+     <form ng-submit="addNinja()">
+        <table class="table">
+            <tr class="table-primary"><th></th><th></th></tr>
+            <tr><td><label>Enter Name</label></td>
+            <td><input type="text" placeholder="character name" ng-model="newChar.name" required=/></td></tr>
+            <tr><td><label>Enter Role</label></td>
+            <td><input type="text" placeholder="Enter role" ng-model="newChar.role" /></td></tr>
+            <tr><td><label>Hishest Power level</label></td>
+            <td><input type="text" placeholder="enter Power Level" ng-model="newChar.powerLevel"/></td></tr>
+            <tr><td><label>Enter Highest Form</label></td>
+            <td><input type="text" placeholder="Enter Highest Form" ng-model="newChar.highestLevel"/></td></tr>
+            <tr><td><label>Enter Aura</label></td>
+            <td><input type="text" placeholder="Enter Aura color" ng-model="newChar.color"/></td></tr>
+            <tr>
+            <td><input type="submit" value="Add Character" class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-sm"/></td></tr>
+
+    
+        
+</form>
+
+    </div>
+  </div>
+</div> 
+<!--********************pop up tags ends***********-->
+
+
+
+
+</div>
