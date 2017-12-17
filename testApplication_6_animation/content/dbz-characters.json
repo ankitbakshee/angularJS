@@ -1,0 +1,59 @@
+[
+        {
+            "photo":"content/goku_blue.png",
+            "name":"Goku",
+            "role":"saiyan",
+            "powerLevel": "9000000",
+            "highestLevel":"Super Saiyan God/Blue",
+            "color":"skyblue"
+        },
+        {
+            "photo":"content/vegeta_blue.png",
+            "name":"Vegeta",
+            "role":"saiyan",
+            "powerLevel": "9000000",
+            "highestLevel":"Super Saiyan God/Blue",
+            "color":"skyblue"
+        },
+        {
+            "photo":"content/piccolo.png",
+            "name":"Piccolo",
+            "role":"namekian",
+            "powerLevel": "4000000",
+            "highestLevel":"Super Namekian",
+            "color":"green"
+        },
+        {
+            "photo":"content/gohan.png",
+            "name":"Gohan",
+            "role":"saiyan",
+            "powerLevel": "8000000",
+            "highestLevel":"Ultimate Gohan",
+            "color":"black"
+        },
+        {
+            "photo":"content/buu.png",
+            "name":"Majjin Buu",
+            "role":"villian",
+            "powerLevel": "7500000",
+            "highestLevel":"Kid Buu",
+            "color":"pink"
+        },
+        {
+            "photo":"content/ginyu.png",
+            "name":"Captain Ginyu",
+            "role":"Freiza's Army leader of ginyu force",
+            "powerLevel": "2000000",
+            "highestLevel":"Level up Ginyu",
+            "color":"purple"
+        },
+        {
+            "photo":"content/whis.png",
+            "name":"Whis",
+            "role":"angel and lord beerus's attendent",
+            "powerLevel": "9999999999999",
+            "highestLevel":"Normal form",
+            "color":"lightblue"
+        }
+
+    ]
